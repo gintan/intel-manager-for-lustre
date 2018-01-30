@@ -107,11 +107,14 @@ set_defaults() {
 
     export COPR_OWNER="managerforlustre"
     export COPR_PROJECT="manager-for-lustre"
-    #LUSTRE_REVIEW_BUILD="12345"
-    if [ -n "$LUSTRE_REVIEW_BUILD" ]; then
-        BASE_URL="https://build.whamcloud.com/jobs-pub/lustre-reviews/configurations/axis-arch/\\\$basearch/axis-build_type"
-        export LUSTRE_SERVER_URL="$BASE_URL/server/axis-distro/el7/axis-ib_stack/inkernel/builds/$LUSTRE_REVIEW_BUILD/archive/artifacts/"
-        export LUSTRE_CLIENT_URL="$BASE_URL/client/axis-distro/el7/axis-ib_stack/inkernel/builds/$LUSTRE_REVIEW_BUILD/archive/artifacts/"
+    #LUSTRE_JOB="b2_10"
+    #LUSTRE_BUILD="lastSuccessfulBuild"
+    LUSTRE_JOB="reviews"
+    LUSTRE_BUILD="54418"
+    if [ -n "$LUSTRE_BUILD" ]; then
+        BASE_URL="https://build.whamcloud.com/jobs-pub/lustre-$LUSTRE_JOB/configurations/axis-arch/\\\$basearch/axis-build_type"
+        export LUSTRE_SERVER_URL="$BASE_URL/server/axis-distro/el7/axis-ib_stack/inkernel/builds/$LUSTRE_BUILD/archive/artifacts/"
+        export LUSTRE_CLIENT_URL="$BASE_URL/client/axis-distro/el7/axis-ib_stack/inkernel/builds/$LUSTRE_BUILD/archive/artifacts/"
     else
         BASE_URL="https://downloads.hpdd.intel.com/public/lustre/lustre-2.10.3/el7/"
         export LUSTRE_SERVER_URL="$BASE_URL/server/"
