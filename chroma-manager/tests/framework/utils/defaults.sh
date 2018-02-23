@@ -110,7 +110,7 @@ set_defaults() {
     #LUSTRE_JOB="b2_10"
     #LUSTRE_BUILD="lastSuccessfulBuild"
     LUSTRE_JOB="reviews"
-    LUSTRE_BUILD="54418"
+    LUSTRE_BUILD="54565"
     if [ -n "$LUSTRE_BUILD" ]; then
         BASE_URL="https://build.whamcloud.com/jobs-pub/lustre-$LUSTRE_JOB/configurations/axis-arch/\\\$basearch/axis-build_type"
         export LUSTRE_SERVER_URL="$BASE_URL/server/axis-distro/el7/axis-ib_stack/inkernel/builds/$LUSTRE_BUILD/archive/artifacts/"
