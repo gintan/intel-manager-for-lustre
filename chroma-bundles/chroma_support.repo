@@ -25,3 +25,14 @@ enabled=1
 gpgcheck=1
 #gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 gpgkey=https://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+
+[brianjmurrell-django]
+name=Copr repo for django owned by brianjmurrell
+baseurl=https://copr-be.cloud.fedoraproject.org/results/brianjmurrell/django/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/brianjmurrell/django/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
